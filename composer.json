@@ -1,0 +1,22 @@
+{
+    "name": "fgh151/yii2-beanstalk-singleton",
+    "description": "Trait for only one instance of beanstalk worker",
+    "type": "library",
+    "keywords": ["yii2","library","singleton","beanstalk"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fedor B Gorsky",
+            "email": "fedor@support-pc.org"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "udokmeci/yii2-beanstalk" : "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "fgh151\\beanstalk\\singleton\\": ""
+        }
+    }
+}
