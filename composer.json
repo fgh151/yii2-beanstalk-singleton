@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "fgh151\\beanstalk\\singleton\\": ""
+            "fgh151\\beanstalk\\": ""
         }
     }
 }
