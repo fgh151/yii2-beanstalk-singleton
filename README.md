@@ -48,3 +48,28 @@ it will print pid of current process or "Not active" if worker not run
 ./yii test/halt
 ```
 it will halt current worker
+
+PHP >= 5.4
+----------
+
+If you use php >= 5.4, you mas override __construct and __destruct methods:
+
+```php
+class BuildController extends BeanstalkController
+{
+    use fgh151\beanstalk\Singleton {
+        Singleton::__construct as private __TraitConstruct;
+        Singleton::__destruct as private __TraitDestruct;
+    }
+
+    public function __construct($id, Module $module, array $config)
+    {
+        $this->__TraitConstruct($id, $module, $config);
+    }
+    
+    public function __destruct()
+    {
+        $this->__TraitDestruct();
+    }
+}
+```
